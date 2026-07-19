@@ -70,3 +70,56 @@ function Serve(item: ChaiOrder | string) {
   }
   return `serving custom chai: ${item}`
 }
+
+// Discriminated Unions:- A Discriminated Union (also called a tagged union or algebraic data type) is a TypeScript pattern for representing a value that can be one of several different types, where each type has a common property (called the discriminant or tag) with a unique literal value.
+
+// This allows TypeScript to automatically narrow the type based on that property.
+
+// Here, "type" is the discriminant property.
+
+
+type MasalaChai = {
+  type: "masala";
+  spiceLevel: number;
+}
+
+type GingerChai = {
+  type: "ginger";
+  amount: number;
+}
+
+type ElaichiChai = {
+  type: "elaichi";
+  aroma: number;
+}
+
+type Chai = MasalaChai | GingerChai | ElaichiChai;
+
+function MakeChai(order: Chai) {
+  switch(order.type) {
+    case "masala":
+      return `MasalaChai`;
+      break;
+    case "ginger":
+      return `GingerChai`;
+      break;
+    case "elaichi":
+      return `ElaichiChai`;
+      break;
+  }
+}
+
+
+// Checking based on a specific property:-
+
+function Brew(order: MasalaChai | GingerChai) {
+  if("spiceLevel" in order) {
+    return order;
+  }
+}
+
+// With array:- 
+
+function isStringArray(arr: unknown): arr is string {
+  return arr;
+}
