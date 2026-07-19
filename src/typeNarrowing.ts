@@ -6,3 +6,12 @@ function getChai(kind: string | number) {
   }
   return `chai order: ${kind}`;
 }
+
+// Truthiness examples:-
+
+function serveChai(msg?: string) {
+  if(msg) {
+    return `Serving ${msg}`;
+  }
+  return `Serving default Masala Chai`;
+}
