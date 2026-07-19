@@ -47,3 +47,26 @@ function serve(chai: kulhadChai | cutting) {
     return chai.serve();
   }
 }
+
+// Custom Type Predicates-(is) (also known as user-defined type guards)
+
+type ChaiOrder = {
+  type: string;
+  sugar: number;
+}
+
+function isChaiOrder(obj: any): obj is ChaiOrder {
+  return(
+    typeof obj === "object" &&
+    obj !== null &&
+    typeof obj.type === "string" && 
+    typeof obj.sugar === "number"
+  )
+}
+
+function Serve(item: ChaiOrder | string) {
+  if(isChaiOrder(item)) {
+    return `serving ${item.type} chai with ${item.sugar} sugar`;
+  }
+  return `serving custom chai: ${item}`
+}
