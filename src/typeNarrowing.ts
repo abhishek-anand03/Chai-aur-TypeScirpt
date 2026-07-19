@@ -27,3 +27,23 @@ function orderChai(size: "small" | "medium" | "large") {
   }
   return `chai order ${size}`;
 }
+
+// Safety Checks example:-
+
+class kulhadChai {
+  serve() {
+    return `serving kulhad chai`;
+  }
+}
+
+class cutting {
+  serve() {
+    return `serving cutting chai`;
+  }
+}
+
+function serve(chai: kulhadChai | cutting) {
+  if(chai instanceof kulhadChai) { // if chai instanceof is saftey check.
+    return chai.serve();
+  }
+}
