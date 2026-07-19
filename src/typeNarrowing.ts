@@ -15,3 +15,15 @@ function serveChai(msg?: string) {
   }
   return `Serving default Masala Chai`;
 }
+
+// Exhaustive Checks example:-
+
+function orderChai(size: "small" | "medium" | "large") {
+  if(size === "small") {
+    return `small cutting chai...`;
+  }
+  if(size === "medium" || size === "large") {
+    return `make extra chai`;
+  }
+  return `chai order ${size}`;
+}
