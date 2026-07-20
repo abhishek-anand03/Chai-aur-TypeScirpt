@@ -52,3 +52,21 @@ class myRes implements Response {
   ok: boolean = true;
 }
 */
+
+// Intersection Type:- An intersection type in TypeScript combines multiple types into one type using the & operator.
+
+type TeaType = "masala" | "ginger" | "lemon";
+
+function orderChai(t: TeaType) {
+  console.log(t);
+} 
+
+type BaseChai = { tealeaves: number; }
+type Extra = { masala: number; }
+
+type MasaalaChai = BaseChai & Extra; // Example of intersection type.
+
+const Cup: MasaalaChai = {
+  tealeaves: 2,
+  masala: 3
+} 
