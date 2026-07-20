@@ -50,3 +50,23 @@ try {
 
 const data: unknown = "chai aur code";
 const strData: string = data as string;
+
+// Never Type:-
+type Role = "admin" | "user" | "superadmin";
+
+function redirectBasedOnRole(role: Role): void {
+  if(role === "admin") {
+    console.log("Redirecting to admin dashboard");
+    return;
+  }
+  if (role === "user") {
+    console.log("Redirecting to user dashboard");
+   return; 
+  }
+  role; // Here, after hovering over role before adding "superadmin", it'll show "never" type, after adding "superadmin", it'll show "superadmin" type.
+}
+
+  // Example of infinite loop while using "never" type;
+function neverReturn(): never {
+  while(true) {};
+}
