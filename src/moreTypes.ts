@@ -32,4 +32,21 @@ if(typeof newValue === "string") {
   newValue.toUpperCase();
 }
 
+// Handling errors in try/catch:-
+try {
 
+} catch(error) {
+  console.log(error.message); // This line will throw error because of "catch" doesn't know yet for sure that message property exist in the "error" or not. To solve this problem we need to apply type guard(line no. 46).
+} 
+
+try {
+  
+} catch (error) {
+  if (error instanceof Error) {
+    console.log(error.message);
+  }
+  console.log("Error", error);
+}
+
+const data: unknown = "chai aur code";
+const strData: string = data as string;
