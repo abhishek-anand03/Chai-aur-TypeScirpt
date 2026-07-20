@@ -50,3 +50,14 @@ type Brew = { brewTime: number };
 
 const Coffee = { brewTime: 5, beans: "Arabica"};
 const chaiBrew: Brew = Coffee;
+
+// Type Checking:-
+type user = {
+  username: string;
+  password: string;
+}
+
+const u: user = {
+  username: "Abhishek",
+  password: "123" // If we don't write all the types then we will get an error and red curvy line appear under variable.
+}
