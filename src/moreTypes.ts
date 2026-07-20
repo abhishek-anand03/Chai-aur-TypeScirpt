@@ -15,3 +15,21 @@ console.log(typeof bookObject);
 
   // Input Element (as) example:-
 const inputElement = document.getElementById("username") as HTMLInputElement
+
+// any v/s unknown (Deep Dive):-
+let value: any;
+value = "chai";
+value = [1, 2, 3];
+value = 2.5;
+value.UpperCase();
+
+let newValue: unknown;
+newValue = "chai";
+newValue = [1, 2, 3];
+newValue = 2.5;
+newValue.toUpperCase(); // This line will throw error because of unknown type;
+if(typeof newValue === "string") {
+  newValue.toUpperCase();
+}
+
+
