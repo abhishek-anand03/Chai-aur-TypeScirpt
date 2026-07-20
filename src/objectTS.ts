@@ -107,4 +107,19 @@ const placeOrder = (order: Required <ChaiOrder>) => {
 placeOrder({
   name: "Masal Chai",
   quantity: 2
-})
+});
+
+// Pick <T> Utility Type:-
+type Chaai = {
+  name: string;
+  price: number;
+  isHot: boolean;
+  ingredients: string[];
+}
+
+type BasicChaiInfo = Pick <Chaai, "name" | "price">;
+
+const ChaiInfo: BasicChaiInfo = {
+  name: "Lemon Tea",
+  price: 30
+}
