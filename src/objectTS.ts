@@ -36,3 +36,17 @@ const adrakChai: Tea = {
   price: 25,
   ingredients: ["ginger", "tealeaves"]
 }
+
+// Duck Typing / Structural Typing:-
+type Cup = { size: string };
+
+let smallCup: Cup = { size: "200ml" };
+let bigCup = { size: "500ml", material: "steel" };
+
+smallCup = bigCup; // No issue will happen because bare minimum is satisfied and i.e. {size: string} in small cup, only {material: "steel"} getting added in it.
+
+// 
+type Brew = { brewTime: number };
+
+const Coffee = { brewTime: 5, beans: "Arabica"};
+const chaiBrew: Brew = Coffee;
