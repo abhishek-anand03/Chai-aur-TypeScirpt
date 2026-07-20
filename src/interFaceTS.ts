@@ -70,3 +70,31 @@ const Cup: MasaalaChai = {
   tealeaves: 2,
   masala: 3
 } 
+
+
+// Optional & Readonly properties:-
+
+  // Optional example:-
+type user = {
+  username: string;
+  bio?: string;
+}
+
+const U1: user = { username: "Hitesh" };
+const U2: user = {
+ username: "Hitesh",
+ bio: "hitesh.ai"
+}
+
+  // Readonly example:-
+type config = {
+  readonly appName: string;
+  version: number
+}
+
+const cfg: config = {
+  appName: "Masterji",
+  version: 1
+}
+
+// cfg.appName = "Chai&Code"; // Cannot assign to 'appName' because it is a read-only property.
