@@ -27,3 +27,26 @@ function MakeOrder(order: string): string{
 function logChai(): void { // No value will return form this because of void type.
   console.log("chai is ready");
 }
+
+// Optional Parameters in functions:- 
+
+// optional example:- 
+function orderChai(type?: string) {
+
+}
+
+// default example:-
+function OrderChai(type: string = "Masala") {
+
+}
+
+// Note:- Both examples should be written at the end.
+
+//
+function createChai(order: {
+  type: string;
+  sugar: number;
+  size: "small" | "large";
+}): number {
+  return 4;
+}
