@@ -22,3 +22,8 @@ function MakeOrder(order: string): string{
   if(!order) return null; // I declared that the function returns a string: This means every return statement must return a string. But here, it returning null, which is not a string.
   return order;  
 }
+
+// Void Return Type:- 
+function logChai(): void { // No value will return form this because of void type.
+  console.log("chai is ready");
+}
