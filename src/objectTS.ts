@@ -93,3 +93,18 @@ const updateChai = (updates: Partial <Chai>) => {
 updateChai({ price: 25 });
 updateChai({ isHot: false });
 updateChai({ }); // We can leave an empty object as well but later on it can create an issue.
+
+// Required <T> Utility Type:-
+type ChaiOrder = {
+  name?: string;
+  quantity?: number;
+}
+
+const placeOrder = (order: Required <ChaiOrder>) => {
+  console.log(order);
+}
+
+placeOrder({
+  name: "Masal Chai",
+  quantity: 2
+})
