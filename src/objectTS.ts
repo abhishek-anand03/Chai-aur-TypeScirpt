@@ -61,3 +61,20 @@ const u: user = {
   username: "Abhishek",
   password: "123" // If we don't write all the types then we will get an error and red curvy line appear under variable.
 }
+
+// Splitting the Data Types:-
+type Item = {
+  name: string;
+  quantity: number;
+}
+
+type Address = {
+  street: string;
+  pin: number;
+}
+
+type order = {
+  id: string;
+  items: Item[];
+  address: Address;
+}
