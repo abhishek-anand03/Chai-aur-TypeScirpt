@@ -123,3 +123,13 @@ const ChaiInfo: BasicChaiInfo = {
   name: "Lemon Tea",
   price: 30
 }
+
+// Omit <T> Utility Type:-
+type ChaiNew = {
+  name: string;
+  price: number;
+  isHot: boolean;
+  secretIngredients: string;
+}
+
+type PublicChai = Omit <Chai, "secretIngredients">;
