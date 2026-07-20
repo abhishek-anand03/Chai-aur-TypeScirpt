@@ -78,3 +78,18 @@ type order = {
   items: Item[];
   address: Address;
 }
+
+// Partial <T> Utility Type:-
+type Chai = {
+  name: string;
+  price: number;
+  isHot: boolean;
+}
+
+const updateChai = (updates: Partial <Chai>) => {
+  console.log("Updating chai with", updates);
+}
+
+updateChai({ price: 25 });
+updateChai({ isHot: false });
+updateChai({ }); // We can leave an empty object as well but later on it can create an issue.
