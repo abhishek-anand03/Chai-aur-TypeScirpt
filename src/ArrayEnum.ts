@@ -48,3 +48,42 @@ const location: readonly[number, number] = [28.66, 32.39];
 const chaiItems: [name: string, price:number] = [
   "Masal", 25
 ];
+
+// Enums:-
+
+// Syntax:-
+enum CupSize {
+  SMALL,
+  MEDIUM,
+  LARGE
+};
+
+const size = CupSize.LARGE;
+
+// Auto-increment Example:- 
+enum Status {
+  PENDING = 100,
+  SERVED, // 101
+  CANCELLED // 102
+}
+
+// Note:- In enums values should be consistent, if value getting declared in one property, then others should get value as well.
+// Note:- In enums values mostly stays consistent, if one value is string, then others should be string. Same for other data Types.
+
+enum ChaiType {
+  MASALA = "Masala",
+  GINGER = "Ginger"
+}
+
+function makeChai(type: ChaiType) {
+  console.log(`Making ${type}`);
+  
+};
+makeChai(ChaiType.GINGER);
+makeChai(ChaiType.MASALA);
+
+// Heterogeneous Enums:- Not a good practice.
+enum RandomEnum {
+  ID = 1,
+  NAME = "Chai"
+}
