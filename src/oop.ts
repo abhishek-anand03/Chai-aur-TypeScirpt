@@ -30,3 +30,29 @@ class chai {
 
 const c = new chai();
 c.reveal(); // Accessing through reveal.
+
+// Protected Modifier:-
+// protected shopName = "Chai Corner"; // Access within class and Inheritance.
+
+class Shop {
+  protected shopName = "Chai Corner";
+};
+
+class Branch extends Shop {
+  getName() {
+    return this.shopName // ok
+  }
+};
+
+new Branch().getName; 
+
+// Another way for using private keyword.
+class wallet {
+  #balance = 100;
+  getBalance() {
+    return this.#balance
+  }
+}
+
+const w = new wallet;
+w.getBalance;
