@@ -56,3 +56,12 @@ class wallet {
 
 const w = new wallet;
 w.getBalance;
+
+// ReadOnly in class:-
+class cup {
+  readonly capacity: number = 250;
+
+  constructor (capacity: number) {
+    this.capacity = capacity;
+  }
+}
