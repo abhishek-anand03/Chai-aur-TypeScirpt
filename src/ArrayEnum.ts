@@ -27,3 +27,13 @@ const table: number[][] = [
   [1, 2, 3],
   [4, 5, 6]
 ];
+
+// Tuples:-
+
+// Syntax:-
+let chaiTuple: [String, number];
+
+chaiTuple = ["Masala", 20];
+chaiTuple = [20, "Masala"]; // Strict format:- Cannot change the order of the values.
+
+
