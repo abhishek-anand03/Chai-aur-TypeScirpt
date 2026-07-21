@@ -36,4 +36,9 @@ let chaiTuple: [String, number];
 chaiTuple = ["Masala", 20];
 chaiTuple = [20, "Masala"]; // Strict format:- Cannot change the order of the values.
 
+// With optional value:-
+let userInfo: [string, number, boolean?];
+userInfo = ["Abhishek", 234];
+userInfo = ["Abhishek", 234, true];
+
 
