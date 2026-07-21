@@ -91,3 +91,14 @@ class EkChai {
 }
 
 console.log(EkChai.shopName);
+
+// Abstract class:-
+abstract class Drink {
+  abstract make(): void
+}
+
+class MyChai extends Drink {
+  make() {
+    console.log("Brewing Chai");
+  }
+}
