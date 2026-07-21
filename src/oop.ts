@@ -65,3 +65,20 @@ class cup {
     this.capacity = capacity;
   }
 }
+
+// Getters & Setters in class:- We use this when we cannot access values directly.
+class ModernChai {
+  private _sugar: number = 2;
+
+  get sugar() {
+    return this._sugar;
+  }
+
+  set sugar(value: number) {
+    if(value > 5) throw new Error("Too Sweet")
+      this._sugar = value;
+  }
+}
+
+const ch = new ModernChai();
+ch.sugar = 3;
