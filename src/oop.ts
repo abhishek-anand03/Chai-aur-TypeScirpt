@@ -82,3 +82,12 @@ class ModernChai {
 
 const ch = new ModernChai();
 ch.sugar = 3;
+
+// Static Members in class:-
+class EkChai {
+  static shopName = "Chai Caffe";
+
+  constructor (public flavour: string){}
+}
+
+console.log(EkChai.shopName);
