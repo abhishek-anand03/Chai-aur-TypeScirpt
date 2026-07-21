@@ -21,3 +21,9 @@ const menu: Chai[] = [
 // Readonly Arrays:-
 const cities: readonly string[] = ["Delhi", "Jaipur"];
 cities.push("Pune"); // Cannot update Readonly properties/values.
+
+// Multi-Dimensional Array:- 2D
+const table: number[][] = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
