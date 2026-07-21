@@ -96,3 +96,7 @@ const enum Sugars {
 }
 
 const s = Sugars.HIGH;
+
+// We can modify Tuples:-
+let t: [string, number] = ["chai", 10];
+t.push("extra");
