@@ -41,4 +41,5 @@ let userInfo: [string, number, boolean?];
 userInfo = ["Abhishek", 234];
 userInfo = ["Abhishek", 234, true];
 
-
+// Readonly Tuples:-
+const location: readonly[number, number] = [28.66, 32.39];
