@@ -17,3 +17,7 @@ const menu: Chai[] = [
   {name: "Masala", price: 15},
   {name: "Adrak", price: 25}
 ]
+
+// Readonly Arrays:-
+const cities: readonly string[] = ["Delhi", "Jaipur"];
+cities.push("Pune"); // Cannot update Readonly properties/values.
