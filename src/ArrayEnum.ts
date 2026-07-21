@@ -43,3 +43,8 @@ userInfo = ["Abhishek", 234, true];
 
 // Readonly Tuples:-
 const location: readonly[number, number] = [28.66, 32.39];
+
+// Named Tuple:-
+const chaiItems: [name: string, price:number] = [
+  "Masal", 25
+];
