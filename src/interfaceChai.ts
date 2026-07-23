@@ -20,3 +20,10 @@ const s: Shop = {
   id: 1,
   name: "Chaicode Caffe"
 };
+
+// Interface for Functions:-
+interface DiscountCalculator {
+  (price:number): number
+};
+
+const apply50: DiscountCalculator = (p) => p * 0.5;
