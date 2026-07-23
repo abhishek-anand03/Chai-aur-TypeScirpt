@@ -71,7 +71,7 @@ const u: User = {
   age: 42
 }
 
-// 
+// Extending an interface.
 interface A{a: string}
 interface B{b: string}
 
