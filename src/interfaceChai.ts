@@ -27,3 +27,22 @@ interface DiscountCalculator {
 };
 
 const apply50: DiscountCalculator = (p) => p * 0.5;
+
+
+// Interface for Functions with "Start & Stop" methods:-
+interface TeaMachine {
+  start(price: number): void;
+  stop(): void;
+};
+
+const machine: TeaMachine = {
+  start() {
+    console.log("Start");
+    
+  },
+
+  stop() {
+    console.log("Stop");
+    
+  }
+};
