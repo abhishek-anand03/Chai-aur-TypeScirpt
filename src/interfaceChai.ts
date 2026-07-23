@@ -56,3 +56,23 @@ const ratings: ChaiRatings = {
   masala: 4.5,
   ginger: 4.5
 }
+
+// Interface Merging:-
+interface User {
+  name: string;
+}
+
+interface User {
+  age: number;
+}
+
+const u: User = {
+  name: "Abhishek",
+  age: 42
+}
+
+// 
+interface A{a: string}
+interface B{b: string}
+
+interface c extends A, B {}
