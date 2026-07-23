@@ -46,3 +46,13 @@ const machine: TeaMachine = {
     
   }
 };
+
+// Index Signatures:-
+interface ChaiRatings {
+  [flavour: string]: number;
+}
+
+const ratings: ChaiRatings = {
+  masala: 4.5,
+  ginger: 4.5
+}
