@@ -26,11 +26,11 @@ interface Box<T> {
 };
 
 const numberBox: Box<number> = {
-  content: 10;
+  content: 10
 };
 
 const numberBoxCup: Box<string> = {
-  content: "10";
+  content: "10"
 };
 
 //
