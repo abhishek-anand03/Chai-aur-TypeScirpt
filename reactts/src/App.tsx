@@ -1,5 +1,6 @@
 import './App.css'
 import { ChaiCard } from './components/ChaiCard'
+import { Counter } from './components/counter'
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
           name="iPhone"
           price= {80000}
         />
+      </div>
+      <div>
+        <Counter />
       </div>
     </>
   )
