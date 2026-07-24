@@ -1,8 +1,34 @@
 // Fetching Data with Types:- 
 import axios from "axios";
+import type { AxiosResponse } from "axios";
 
 axios.get("https://example.com/data")
 .then(response => {
   console.log(response.data);
   
 });
+
+interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
+
+const FetchData = async () => {
+  try {
+    const response: AxiosResponse <Todo> = await axios.get("");
+    console.log("Todo", response.data);
+    
+  } catch(error: any) {
+      if(axios.isAxiosError(error)) {
+        console.log("AxiosError", error.message);
+        
+      }
+      if(error.response) {
+        console.log(error.response);
+        
+      }
+  }
+
+}
