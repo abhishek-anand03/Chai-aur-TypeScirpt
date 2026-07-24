@@ -17,18 +17,15 @@ interface Todo {
 
 const FetchData = async () => {
   try {
-    const response: AxiosResponse <Todo> = await axios.get("");
+    const response: AxiosResponse <Todo> = await axios.get("https://jsonplaceholder.typicode.com/todos/1");
     console.log("Todo", response.data);
-    
-  } catch(error: any) {
-      if(axios.isAxiosError(error)) {
-        console.log("AxiosError", error.message);
-        
-      }
+  } 
+  catch(error: any) {
+    if(axios.isAxiosError(error)) {
+      console.log("AxiosError", error.message);
       if(error.response) {
-        console.log(error.response);
-        
+      console.log(error.response);
       }
+    }
   }
-
 }
