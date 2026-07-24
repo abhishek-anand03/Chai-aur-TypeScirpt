@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 export function Counter() {
-  const [count, setCount] = useState(0);
-  
+  const [count, setCount] = useState<number | null>(0);
+
   return(
     <div>
       <p>
