@@ -11,7 +11,11 @@ function App() {
         </h1>
         <ChaiCard 
           name="Headphone"
-          price="5000"
+          price= {5000}
+        />
+        <ChaiCard 
+          name="iPhone"
+          price= {80000}
         />
       </div>
     </>
